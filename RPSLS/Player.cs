@@ -16,7 +16,11 @@ namespace RPSLS
             score = 0;
         }
         //Method (can do)
-        
+        public virtual void Choice(List<string> choices)
+        {
+            choice = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine(name +)
+        }
 
     }
 }
