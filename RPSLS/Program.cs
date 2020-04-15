@@ -6,8 +6,8 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Game GAME = new Game ();
-            GAME.Rungame()
+            Game game = new Game();
+            game.RunGame();
 
         }
     }
