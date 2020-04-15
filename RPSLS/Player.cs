@@ -9,18 +9,14 @@ namespace RPSLS
         //Variable (has a)
         public string name;
         public int score;
-        public int choice;
+        public string chosenGesture;
+       
         //Constructor
         public Player()
         {
             score = 0;
         }
         //Method (can do)
-        public virtual void Choice(List<string> choices)
-        {
-            choice = Convert.ToInt32(Console.ReadLine()) - 1;
-            Console.WriteLine(name +)
-        }
-
+        //choosing a gesture method
     }
 }
