@@ -4,16 +4,24 @@ using System.Text;
 
 namespace RPSLS
 {
-    class Player
+    abstract class Player
     {
         //Variable (has a)
         public int score;
         public string chosenGesture;
-       
+        public List<string> gestures;
         //Constructor
         public Player()
         {
             score = 0;
+            gestures = new List<string>
+            {
+                "Rock",
+                "Paper",
+                "Scissors",
+                "Lizard",
+                "Spock"
+            };
         }
         //Method (can do)
         //choosing a gesture method
@@ -26,5 +34,7 @@ namespace RPSLS
                 Console.WriteLine(gestureOptions[i]);
             }
         }
+
+        public abstract void ChooseGesture();
     }
 }
