@@ -39,7 +39,7 @@ namespace RPSLS
                 player2.ChooseGesture();
                 CompareChoices();
             }
-            //DisplayGameWinner();
+            DisplayGameWinner();
             ///
 
             // 1) Display rules (also include how many rounds!) [GAME]
@@ -179,19 +179,25 @@ namespace RPSLS
                 Console.WriteLine("Player1 has won the round");
                 player1.score++;
             }
-            else if (player1.chosenGesture == "" && (player2.chosenGesture == "" || player2.chosenGesture == ""))
-            {
-                Console.WriteLine("");
-                player2.score++;
-            }
-            else if (player1.chosenGesture == "" && (player2.chosenGesture == "" || player2.chosenGesture == ""))
-            {
-                Console.WriteLine("");
-                player1.score++;
-            }
+
+            
         }
 
-
+        public void DisplayGameWinner()
+        {
+            if (player1.score == pointsNeededToWin)
+            {
+                Console.WriteLine("Player1 Wins! Game Over");
+                Console.WriteLine("Wanna Play Again?" );
+                ChooseGameMode();
+            }
+            else if (player2.score == pointsNeededToWin)
+            {
+                Console.WriteLine("Player2 Wins! Game Over");
+                Console.WriteLine("Wanna Play Again?");
+                ChooseGameMode();
+            }
+        }
 
 
 
